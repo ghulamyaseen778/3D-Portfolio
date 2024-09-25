@@ -2,6 +2,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { github } from "../../assets";
+import { Earth } from "../../assets";
 import { SectionWrapper } from "../../hoc";
 import { projects } from "../../constants";
 import { fadeIn } from "../../utils/motion";
@@ -16,7 +17,9 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
   tags,
   image,
   sourceCodeLink,
-}) => {
+  liveLink,
+  category
+}:any) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -26,15 +29,25 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
         tiltMaxAngleY={30}
         glareColor="#aaa6c3"
       >
-        <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[300px]">
+        <div className="bg-tertiary w-full rounded-2xl p-5 sm:w-[360px]">
           <div className="relative h-[230px] w-full">
             <img
               src={image}
               alt={name}
               className="h-full w-full rounded-2xl object-cover"
             />
-            <div className="card-img_hover absolute inset-0 m-3 flex justify-end">
-              <div
+            <div className="card-img_hover absolute inset-0 m-3 flex justify-end gap-1">
+             {liveLink&& <div
+                onClick={() => window.open(liveLink, "_blank")}
+                className=" bg-green-500 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full "
+              >
+                <img
+                  src={Earth}
+                  alt="github"
+                  className="h-1/2 w-1/2 object-contain"
+                />
+              </div>}
+             {sourceCodeLink&& <div
                 onClick={() => window.open(sourceCodeLink, "_blank")}
                 className="black-gradient flex h-10 w-10 cursor-pointer items-center justify-center rounded-full"
               >
@@ -43,15 +56,18 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
                   alt="github"
                   className="h-1/2 w-1/2 object-contain"
                 />
-              </div>
+              </div>}
             </div>
           </div>
           <div className="mt-5">
             <h3 className="text-[24px] font-bold text-white">{name}</h3>
+            <p key={category} className={`text-[14px] green-text-gradient`}>
+                # {category}
+              </p>
             <p className="text-secondary mt-2 text-[14px]">{description}</p>
           </div>
           <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
+            {tags.map((tag:any) => (
               <p key={tag.name} className={`text-[14px] ${tag.color}`}>
                 #{tag.name}
               </p>
@@ -65,7 +81,7 @@ const ProjectCard: React.FC<{ index: number } & TProject> = ({
 
 const Works = () => {
   return (
-    <>
+    <div >
       <Header useMotion={true} {...config.sections.works} />
 
       <div className="flex w-full">
@@ -82,8 +98,8 @@ const Works = () => {
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Works, "projects");

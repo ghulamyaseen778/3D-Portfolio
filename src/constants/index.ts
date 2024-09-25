@@ -26,12 +26,15 @@ import {
   docker,
   meta,
   starbucks,
-  tesla,
+  // tesla,
   shopify,
   carrent,
-  jobit,
-  tripguide,
+  // jobit,
+  // tripguide,
   threejs,
+  Deskskills,
+  Bids101,
+  Palm,
 } from "../assets";
 
 export const navLinks: TNavLink[] = [
@@ -41,7 +44,11 @@ export const navLinks: TNavLink[] = [
   },
   {
     id: "work",
-    title: "Work",
+    title: "Work Experience",
+  },
+  {
+    id: "projects",
+    title: "Projects",
   },
   {
     id: "contact",
@@ -63,7 +70,7 @@ const services: TService[] = [
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Software Enginner",
     icon: creator,
   },
 ];
@@ -125,11 +132,11 @@ const technologies: TTechnology[] = [
 
 const experiences: TExperience[] = [
   {
-    title: "React.js Developer",
-    companyName: "Starbucks",
+    title: "Front End Developer",
+    companyName: "Native Brains",
     icon: starbucks,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "JAN 2023 - FEB 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -138,24 +145,11 @@ const experiences: TExperience[] = [
     ],
   },
   {
-    title: "React Native Developer",
-    companyName: "Tesla",
-    icon: tesla,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    companyName: "Shopify",
+    title: "MERN Stack Developer",
+    companyName: "Cubic (Remote)",
     icon: shopify,
     iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
+    date: "AUG 2023 - DEC 2023",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -165,15 +159,15 @@ const experiences: TExperience[] = [
   },
   {
     title: "Full stack Developer",
-    companyName: "Meta",
+    companyName: "Desk Work Solution",
     icon: meta,
     iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
+    date: "SSP 2023 - Present",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Led the development and optimization of cross-platform mobile applications using React Native, ensuring smooth user experiences and high-performance features.",
+      "Designed and implemented end-to-end solutions, utilizing Node.js for backend services, React.js for frontend interfaces, and Firebase for real-time database management.",
+      "Developed responsive and user-friendly interfaces, leveraging modern front-end technologies and frameworks to deliver optimal experiences on both web and mobile platforms.",
+      "Collaborated closely with cross-functional teams using Agile methodologies, contributing to sprint planning, code reviews, and project deployments to meet client requirements and deadlines.",
     ],
   },
 ];
@@ -207,68 +201,106 @@ const testimonials: TTestimonial[] = [
 
 const projects: TProject[] = [
   {
-    name: "Car Rent",
+    name: "Boat User App",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "The boat ride-sharing app offers a convenient platform connecting passengers with boat owners for shared rides across water bodies.",
     tags: [
       {
-        name: "react",
+        name: "React-Native",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "Mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "Node.js",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
     sourceCodeLink: "https://github.com/",
+    category:"mobile_application",
+    liveLink:""
   },
   {
-    name: "Job IT",
+    name: "Deskskills Website",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "DeskSkills.com is an online learning platform designed to enhance professional skills across various industries. Offering a range of courses in fields like business, technology.",
     tags: [
       {
-        name: "react",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "Antd",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "Node.js",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
+    image: Deskskills,
     sourceCodeLink: "https://github.com/",
+    category:"website",
+    liveLink:"https://deskskills.com"
   },
   {
-    name: "Trip Guide",
+    name: "101 Bids Website",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "101Bids is a specialized platform offering comprehensive training for mastering the art of bidding and winning contracts. Aimed at freelancers, entrepreneurs, and business. ",
     tags: [
       {
-        name: "nextjs",
+        name: "React.js",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "Antd",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "Mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Node.js",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: Bids101,
     sourceCodeLink: "https://github.com/",
+    category:"website",
+    liveLink:"https://101bids.deskskills.com"
   },
+  {
+    name: "Palm Mobile App",
+    description:
+      "101Bids is a specialized platform offering comprehensive training for mastering the art of bidding and winning contracts.",
+    tags: [
+      {
+        name: "React-Native",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Node.js",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: Palm,
+    sourceCodeLink: "https://github.com/",
+    category:"mobile_application",
+    liveLink:""
+  },
+  
 ];
 
 export { services, technologies, experiences, testimonials, projects };

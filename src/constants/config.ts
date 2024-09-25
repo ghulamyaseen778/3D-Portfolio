@@ -40,13 +40,13 @@ type TConfig = {
 
 export const config: TConfig = {
   html: {
-    title: "John Doe — 3D Portfolio",
-    fullName: "John Doe",
-    email: "johndoe@mail.com",
+    title: "Ghulam Yaseen",
+    fullName: "Ghulam Yaseen",
+    email: "muhammadyaseen3294@gmail@mail.com",
   },
   hero: {
-    name: "John Doe",
-    p: ["I develop 3D visuals, user", "interfaces and web applications"],
+    name: "Ghulam Yaseen",
+    p: ["I develop mobile applications", "interfaces and web applications"],
   },
   contact: {
     p: "Get in touch",
@@ -67,11 +67,7 @@ export const config: TConfig = {
     about: {
       p: "Introduction",
       h2: "Overview.",
-      content: `I'm a skilled software developer with experience in TypeScript and
-      JavaScript, and expertise in frameworks like React, Node.js, and
-      Three.js. I'm a quick learner and collaborate closely with clients to
-      create efficient, scalable, and user-friendly solutions that solve
-      real-world problems. Let's work together to bring your ideas to life!`,
+      content: `I am a skilled MERN stack developer with expertise in building full-stack web applications using MongoDB, Express.js, React, and Node.js. I have experience in developing scalable, high-performance applications, creating RESTful APIs, and building responsive frontends. My passion for coding drives me to stay updated with the latest trends and technologies, allowing me to deliver efficient and maintainable solutions. I enjoy working on dynamic projects, collaborating with cross-functional teams, and constantly honing my skills to bring innovative ideas to life.`,
     },
     experience: {
       p: "What I have done so far",
